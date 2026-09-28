@@ -7,7 +7,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>For Noor ❤️</title>
+    <title>For Nour ❤️</title>
 
     <style>
 
@@ -16,6 +16,11 @@
             margin: 0;
             padding: 0;
         }
+
+
+        /* ================================
+           BODY
+        ================================= */
 
         body {
             min-height: 100vh;
@@ -27,22 +32,7 @@
 
             font-family: Arial, sans-serif;
 
-            background: linear-gradient(
-                135deg,
-                #ff9a9e,
-                #fad0c4
-            );
-
-            overflow: hidden;
-
-            transition: background 0.6s ease;
-        }
-
-
-        /* Background after second NO */
-
-        body.salah-background {
-
+            /* BACKGROUND IMAGE ALWAYS VISIBLE */
             background-image:
                 linear-gradient(
                     rgba(0, 0, 0, 0.35),
@@ -51,19 +41,20 @@
                 url("salah.jpeg");
 
             background-size: cover;
-
             background-position: center;
-
             background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            overflow: hidden;
         }
 
 
-        /* Main box */
+        /* ================================
+           MAIN CONTAINER
+        ================================= */
 
         .container {
-
             width: 90%;
-
             max-width: 420px;
 
             padding: 35px 20px;
@@ -75,7 +66,7 @@
             border-radius: 25px;
 
             box-shadow:
-                0 10px 40px rgba(0, 0, 0, 0.25);
+                0 10px 40px rgba(0, 0, 0, 0.30);
 
             position: relative;
 
@@ -83,15 +74,17 @@
         }
 
 
-        /* Heart */
+        /* ================================
+           HEART
+        ================================= */
 
         .heart {
-
             font-size: 55px;
 
             margin-bottom: 15px;
 
-            animation: heartbeat 1.2s infinite;
+            animation:
+                heartbeat 1.2s infinite;
         }
 
 
@@ -108,13 +101,15 @@
             100% {
                 transform: scale(1);
             }
+
         }
 
 
-        /* Question */
+        /* ================================
+           QUESTION
+        ================================= */
 
         h1 {
-
             font-size: 28px;
 
             color: #e91e63;
@@ -125,10 +120,11 @@
         }
 
 
-        /* Buttons container */
+        /* ================================
+           BUTTON CONTAINER
+        ================================= */
 
         .buttons {
-
             display: flex;
 
             justify-content: center;
@@ -143,10 +139,11 @@
         }
 
 
-        /* Buttons */
+        /* ================================
+           BUTTONS
+        ================================= */
 
         button {
-
             border: none;
 
             padding: 15px 25px;
@@ -168,39 +165,42 @@
         }
 
 
-        /* YES */
+        button:active {
+            transform: scale(0.92);
+        }
+
+
+        /* ================================
+           YES BUTTON
+        ================================= */
 
         #yesBtn {
-
             background: #ff4081;
 
             color: white;
 
             box-shadow:
-                0 5px 15px rgba(255, 64, 129, 0.4);
+                0 5px 15px
+                rgba(255, 64, 129, 0.4);
         }
 
 
-        /* NO */
+        /* ================================
+           NO BUTTON
+        ================================= */
 
         #noBtn {
-
             background: #eeeeee;
 
             color: #555;
         }
 
 
-        button:active {
-
-            transform: scale(0.92);
-        }
-
-
-        /* Message */
+        /* ================================
+           MESSAGE
+        ================================= */
 
         .message {
-
             margin-top: 20px;
 
             color: #555;
@@ -213,8 +213,11 @@
         }
 
 
-        .success {
+        /* ================================
+           SUCCESS MESSAGE
+        ================================= */
 
+        .success {
             color: #e91e63;
 
             font-weight: bold;
@@ -223,10 +226,11 @@
         }
 
 
-        /* Running NO button */
+        /* ================================
+           RUNNING NO BUTTON
+        ================================= */
 
         .running {
-
             position: fixed !important;
 
             z-index: 9999;
@@ -237,10 +241,11 @@
         }
 
 
-        /* Floating hearts */
+        /* ================================
+           FLOATING HEARTS
+        ================================= */
 
         .floating-heart {
-
             position: fixed;
 
             bottom: -30px;
@@ -259,7 +264,6 @@
         @keyframes floatUp {
 
             0% {
-
                 transform:
                     translateY(0)
                     rotate(0deg);
@@ -268,22 +272,23 @@
             }
 
             100% {
-
                 transform:
                     translateY(-110vh)
                     rotate(360deg);
 
                 opacity: 0;
             }
+
         }
 
 
-        /* Mobile */
+        /* ================================
+           MOBILE
+        ================================= */
 
         @media (max-width: 400px) {
 
             .container {
-
                 width: 92%;
 
                 padding: 30px 15px;
@@ -291,19 +296,18 @@
 
 
             h1 {
-
                 font-size: 24px;
             }
 
 
             button {
-
                 min-width: 100px;
 
                 padding: 14px 20px;
 
                 font-size: 16px;
             }
+
         }
 
     </style>
@@ -314,48 +318,54 @@
 <body>
 
 
+    <!-- =================================
+         MAIN CONTENT
+    ================================= -->
+
     <div class="container">
+
+
+        <!-- Heart -->
 
         <div class="heart">
             ❤️
         </div>
 
 
+        <!-- Question -->
+
         <h1 id="question">
-
-            Noor, will you kiss me? 😘💋
-
+            Nour, will you kiss me? 😘💋
         </h1>
 
 
-        <!--
-            IMPORTANT:
-            NO is FIRST.
-            YES is SECOND.
-        -->
+        <!-- Buttons -->
 
         <div class="buttons">
 
+            <!-- NO FIRST -->
+
             <button id="noBtn">
-
                 NO 😭
-
             </button>
 
 
+            <!-- YES SECOND -->
+
             <button id="yesBtn">
-
                 YES ❤️
-
             </button>
 
         </div>
 
+
+        <!-- Message -->
 
         <div
             class="message"
             id="message">
         </div>
+
 
     </div>
 
@@ -363,8 +373,9 @@
 
     <script>
 
-
-        /* Get elements */
+        /* =================================
+           GET ELEMENTS
+        ================================= */
 
         const yesBtn =
             document.getElementById("yesBtn");
@@ -379,7 +390,9 @@
             document.getElementById("message");
 
 
-        /* Count NO clicks */
+        /* =================================
+           COUNT NO CLICKS
+        ================================= */
 
         let noClicks = 0;
 
@@ -398,13 +411,15 @@
 
 
                 message.innerHTML =
-                    "Noor ❤️ you just made me very happy 🥹💖";
+                    "Nour ❤️ you just made me very happy 🥹💖";
 
 
                 message.classList.add(
                     "success"
                 );
 
+
+                /* Create romantic hearts */
 
                 createHearts();
 
@@ -424,28 +439,28 @@
                 noClicks++;
 
 
-                /* =========================
+                /* =================================
                    FIRST NO CLICK
-                ========================= */
+                ================================= */
 
                 if (noClicks === 1) {
 
                     question.innerHTML =
-                        "Noor, click YES, I wanna kiss you 😘💋";
+                        "Nour, click YES, I wanna kiss you 😘💋";
 
 
                     message.innerHTML =
-                        "Come on Noor... don't click NO 😭❤️";
+                        "Come on Nour... don't click NO 😭❤️";
 
 
                     /*
-                        Swap the buttons.
+                        Swap button positions.
 
-                        Before:
+                        BEFORE:
 
                         NO    YES
 
-                        After:
+                        AFTER:
 
                         YES   NO
                     */
@@ -464,15 +479,14 @@
                 }
 
 
-
-                /* =========================
+                /* =================================
                    SECOND NO CLICK
-                ========================= */
+                ================================= */
 
                 else if (noClicks >= 2) {
 
                     question.innerHTML =
-                        "Noor, you can't escape! 😂💋❤️";
+                        "Nour, you can't escape! 😂💋❤️";
 
 
                     message.innerHTML =
@@ -480,16 +494,7 @@
 
 
                     /*
-                        Add background image
-                    */
-
-                    document.body.classList.add(
-                        "salah-background"
-                    );
-
-
-                    /*
-                        Make NO button fixed
+                        Make NO button run
                     */
 
                     noBtn.classList.add(
@@ -498,7 +503,7 @@
 
 
                     /*
-                        Move it immediately
+                        Move immediately
                     */
 
                     moveButton();
@@ -546,7 +551,7 @@
 
 
             /*
-                Random position
+                Generate random position
             */
 
             const randomX =
@@ -564,7 +569,7 @@
 
 
             /*
-                Move button
+                Apply position
             */
 
             noBtn.style.left =
@@ -579,7 +584,7 @@
 
 
         /* =================================
-           TOUCH NO BUTTON
+           TOUCH SCREEN
         ================================= */
 
         noBtn.addEventListener(
@@ -588,7 +593,7 @@
 
                 /*
                     After second NO,
-                    make it escape.
+                    make button escape.
                 */
 
                 if (noClicks >= 2) {
@@ -605,7 +610,7 @@
 
 
         /* =================================
-           MOUSE NO BUTTON
+           MOUSE
         ================================= */
 
         noBtn.addEventListener(
@@ -653,25 +658,18 @@
 
 
                         /*
-                            Different emojis
+                            Romantic emojis
                         */
 
                         const hearts = [
 
                             "❤️",
-
                             "💕",
-
                             "💖",
-
                             "💗",
-
                             "💘",
-
                             "💋",
-
                             "😍",
-
                             "🥰"
 
                         ];
@@ -687,8 +685,7 @@
 
 
                         /*
-                            Random horizontal
-                            position
+                            Random horizontal position
                         */
 
                         heart.style.left =
@@ -734,7 +731,6 @@
             }
 
         }
-
 
     </script>
 
